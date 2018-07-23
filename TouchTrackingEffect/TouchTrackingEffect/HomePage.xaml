@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TouchTrackingEffectDemos"
+             x:Class="TouchTrackingEffectDemos.HomePage"
+             Title="Touch Tracking Effect">
+    <StackLayout>
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center" />
+                    <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+
+        <Button Text="take picture" Pressed="Button_Pressed"/>
+
+        <ScrollView>
+            <FlexLayout x:Name="MediaList" Wrap="Wrap" Direction="Column"  AlignItems="Start" AlignContent="SpaceAround" AbsoluteLayout.LayoutFlags="SizeProportional"/>
+        </ScrollView>
+
+        <Button Text="Draw on Picture " Pressed="Button_Draw_Pressed" />
+
+    </StackLayout>
+</ContentPage>
